@@ -6,3 +6,5 @@
 
 
 回路図は以下の通り
+
+![circuit_diagram1](https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/make-aroma/circuit_diagrams/circuit_diagram1.png)
