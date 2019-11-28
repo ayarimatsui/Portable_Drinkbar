@@ -9,4 +9,5 @@ sudo PYTHONPATH=".:build/lib.linux-armv7l-2.7" python examples/strandtest.py
 
 でコンパイル＆実行
 
-※https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/　を参考にした
+※https://tutorials-raspberrypi.com/connect-control-raspberry-pi-ws2812-rgb-led-strips/
+を参考にした
