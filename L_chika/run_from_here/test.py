@@ -57,7 +57,9 @@ print("3 -> coke")
 print("4 -> coffee")
 print("5 -> grapefruit_juice")
 print("6 -> orange_juice")
-print("7 -> wine")
+print("7 -> grape_juice")
+print("8 -> meron_soda")
+print("9 -> jasmine_tea")
 
 drink=0
 pre_drink=0
@@ -120,7 +122,15 @@ if __name__ == '__main__':
                     color_appears(strip1, color)  # wipe
                     color_appears(strip2, color)  # wipe
                 elif drink==7:
-                    color=Color(0, 200, 120)
+                    color=Color(0, 200, 210)
+                    color_appears(strip1, color)  # wipe
+                    color_appears(strip2, color)  # wipe
+                elif drink==8:
+                    color=Color(200, 0, 20)
+                    color_appears(strip1, color)  # wipe
+                    color_appears(strip2, color)  # wipe
+                elif drink==9:
+                    color=Color(200, 215, 36)
                     color_appears(strip1, color)  # wipe
                     color_appears(strip2, color)  # wipe
             else:
