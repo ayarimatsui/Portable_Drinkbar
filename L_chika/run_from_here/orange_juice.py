@@ -46,24 +46,23 @@ if __name__ == '__main__':
     parser.add_argument('-c', '--clear', action='store_true', help='clear the display on exit')
     args = parser.parse_args()
 
-    # Create NeoPixel object with appropriate configuration.
     strip1 = Adafruit_NeoPixel(LED_COUNT1, LED_PIN1, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
     strip2 = Adafruit_NeoPixel(LED_COUNT2, LED_PIN2, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL)
     # Intialize the library (must be called once before other functions).
     strip1.begin()
     strip2.begin()
-    
+
     print ('Press Ctrl-C to quit.')
     if not args.clear:
         print('Use "-c" argument to clear LEDs on exit')
 
     try:
         print("init")
-        colorWipe(strip1, Color(200, 240, 40))  # wipe
-        colorWipe(strip2, Color(200, 240, 40))  # wipe
+        colorWipe(strip1, Color(70, 255, 0))  # wipe
+        colorWipe(strip2, Color(70, 255, 0))  # wipe
         while True:
-            show_color(strip1, Color(200, 240, 40))
-            show_color(strip2, Color(200, 240, 40))
+            show_color(strip1, Color(70, 255, 0))
+            show_color(strip2, Color(70, 255, 0))
             
 
     except KeyboardInterrupt:

@@ -52,18 +52,18 @@ if __name__ == '__main__':
     # Intialize the library (must be called once before other functions).
     strip1.begin()
     strip2.begin()
-    
+
     print ('Press Ctrl-C to quit.')
     if not args.clear:
         print('Use "-c" argument to clear LEDs on exit')
 
     try:
         print("init")
-        colorWipe(strip1, Color(200, 240, 40))  # wipe
-        colorWipe(strip2, Color(200, 240, 40))  # wipe
+        colorWipe(strip1, Color(45, 80, 18))  # wipe
+        colorWipe(strip2, Color(45, 80, 18))  # wipe
         while True:
-            show_color(strip1, Color(200, 240, 40))
-            show_color(strip2, Color(200, 240, 40))
+            show_color(strip1, Color(45, 80, 18))
+            show_color(strip2, Color(45, 80, 18))
             
 
     except KeyboardInterrupt:

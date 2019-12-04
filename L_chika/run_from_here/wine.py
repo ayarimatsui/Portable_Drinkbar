@@ -17,14 +17,14 @@ LED_PIN2       = 10
 #LED_PIN        = 10      # GPIO pin connected to the pixels (10 uses SPI /dev/spidev0.0).
 LED_FREQ_HZ    = 800000  # LED signal frequency in hertz (usually 800khz)
 LED_DMA        = 10      # DMA channel to use for generating signal (try 10)
-LED_BRIGHTNESS = 200     # Set to 0 for darkest and 255 for brightest
+LED_BRIGHTNESS = 72     # Set to 0 for darkest and 255 for brightest
 LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 
 
 
 # Define functions which animate LEDs in various ways.
-def colorWipe(strip, color, wait_ms=50):
+def color_appears(strip, color, wait_ms=30):
     """Wipe color across display a pixel at a time."""
     for i in range(strip.numPixels()):
         strip.setPixelColor(i, color)
@@ -52,18 +52,18 @@ if __name__ == '__main__':
     # Intialize the library (must be called once before other functions).
     strip1.begin()
     strip2.begin()
-    
+
     print ('Press Ctrl-C to quit.')
     if not args.clear:
         print('Use "-c" argument to clear LEDs on exit')
 
     try:
         print("init")
-        colorWipe(strip1, Color(200, 240, 40))  # wipe
-        colorWipe(strip2, Color(200, 240, 40))  # wipe
+        color_appears(strip1, Color(0, 200, 120))  # wipe
+        color_appears(strip2, Color(0, 200, 120))  # wipe
         while True:
-            show_color(strip1, Color(200, 240, 40))
-            show_color(strip2, Color(200, 240, 40))
+            show_color(strip1, Color(0, 200, 120))
+            show_color(strip2, Color(0, 200, 120))
             
 
     except KeyboardInterrupt:
