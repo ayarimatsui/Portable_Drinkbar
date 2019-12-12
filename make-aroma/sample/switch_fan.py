@@ -7,7 +7,7 @@ import threading
 fan1_pin=15
 fan2_pin=18
 fan3_pin=20
-fan4_pin=21
+fan4_pin=26
 fan5_pin=12
 fan6_pin=16
 
