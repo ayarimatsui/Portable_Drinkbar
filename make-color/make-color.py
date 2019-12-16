@@ -16,7 +16,7 @@ class MakeColor():
         LED_BRIGHTNESS = 72     # Set to 0 for darkest and 255 for brightest
         LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
         LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
-        
+
         # Process arguments
         parser = argparse.ArgumentParser()
         parser.add_argument('-c', '--clear', action='store_true', help='clear the display on exit')
@@ -37,15 +37,15 @@ class MakeColor():
             strip.setPixelColor(i, color)
             strip.show()
             time.sleep(wait_ms/1000.0)
-     
-     
+
+
     def show_color(self, strip, color, wait_ms=50):
         """Wipe color across display a pixel at a time."""
         for i in range(strip.numPixels()):
             strip.setPixelColor(i, color)
             strip.show()
- 
- 
+
+
     def wheel(self, pos):
         """Generate rainbow colors across 0-255 positions."""
         if pos < 85:
@@ -72,37 +72,40 @@ class MakeColor():
         rainbowCycle(self.strip1)
         self.color=Color(0,0,0)
 
+    def all_off(self):
+        show_color(self.strip1.Color(0,0,0))
+        show_color(self.strip2,Color(0,0,0))
 
     def apple_juice(self):
         self.color=Color(200, 240, 40)
         color_appears(self.strip1, self.color)  # wipe
         color_appears(self.strip2, self.color)  # wipe
-        
-        
+
+
     def black_tea(self):
         self.color=Color(36, 120, 6)
         color_appears(strip1, self.color)  # wipe
         color_appears(strip2, self.color)  # wipe
-        
-        
+
+
     def coke(self):
         self.color=Color(0, 240, 0)
         color_appears(strip1, self.color)  # wipe
         color_appears(strip2, self.color)  # wipe
-        
-        
+
+
     def coffee(self):
         self.color=Color(45, 80, 18)
         color_appears(strip1, self.color)  # wipe
         color_appears(strip2, self.color)  # wipe
-        
-        
+
+
     def grapefruit_juice(self):
         self.color=Color(60, 160, 21)
         color_appears(strip1, self.color)  # wipe
         color_appears(strip2, self.color)  # wipe
-        
-        
+
+
     def orange_juice(self):
         self.color=Color(70, 255, 0)
         color_appears(strip1, self.color)  # wipe
@@ -113,15 +116,14 @@ class MakeColor():
         self.color=Color(0, 200, 210)
         color_appears(strip1, self.color)  # wipe
         color_appears(strip2, self.color)  # wipe
-        
-        
+
+
     def meron_soda(self):
         self.color=Color(200, 0, 20)
         color_appears(strip1, self.color)  # wipe
         color_appears(strip2, self.color)  # wipe
 
-    
+
     def stay_the_same(self):
         show_color(strip1, self.color)
         show_color(strip2, self.color)
-        
