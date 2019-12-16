@@ -137,7 +137,16 @@ if __name__=="__main__":
                     MakeAroma.fan_alloff()
                     MakeBubbly.shake_off()
                 pre_sw_status=DetectOpen.sw_status
-
+            else:
+                print("your input is unavailable.")
+                print("please enter number following the instraction below.")
+                print("0 -> no flavor")
+                print("1 -> apple juice")
+                print("2 -> black tea")
+                print("3 -> coke")
+                print("4 -> orange juice")
+                print("5 -> grape juice")
+                print("6 -> meron soda")
             pre_switch=switch
             time.sleep(0.3)
 
