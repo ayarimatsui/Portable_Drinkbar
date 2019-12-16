@@ -34,6 +34,17 @@ def wait_input():
         switch=5
     elif key=="6":
         switch=6
+    else:
+        print("your input is unavailable.")
+        print("please enter number following the instraction below.")
+        print("0 -> no flavor")
+        print("1 -> apple juice")
+        print("2 -> black tea")
+        print("3 -> coke")
+        print("4 -> orange juice")
+        print("5 -> grape juice")
+        print("6 -> meron soda")
+        switch=7
     print(switch)
 
 
@@ -60,7 +71,8 @@ if __name__=="__main__":
                 MakeColor.all_off() #全てオフ
                 MakeAroma.fan_alloff()
                 MakeBubbly.shake_off()
-                pre_sw_status=0
+                DetectOpen.get_sw_status() #フタが空いてるかどうかを調べる
+                pre_sw_status=DetectOpen.sw_status
             elif switch==1: #リンゴジュース
                 if pre_switch!=switch: #新しくリンゴジュースが指定された時
                     MakeColor.apple_juice()
@@ -138,15 +150,11 @@ if __name__=="__main__":
                     MakeBubbly.shake_off()
                 pre_sw_status=DetectOpen.sw_status
             else:
-                print("your input is unavailable.")
-                print("please enter number following the instraction below.")
-                print("0 -> no flavor")
-                print("1 -> apple juice")
-                print("2 -> black tea")
-                print("3 -> coke")
-                print("4 -> orange juice")
-                print("5 -> grape juice")
-                print("6 -> meron soda")
+                MakeColor.all_off() #全てオフ
+                MakeAroma.fan_alloff()
+                MakeBubbly.shake_off()
+                DetectOpen.get_sw_status() #フタが空いてるかどうかを調べる
+                pre_sw_status=DetectOpen.sw_status
             pre_switch=switch
             time.sleep(0.3)
 
