@@ -2,9 +2,11 @@
 # -*- coding: utf-8 -*-
 import socket
 import string
+import ipget
 
 
-host = 'localhost'   # Raspberry PiのIPアドレス
+
+host = "127.0.0.1"  # Raspberry PiのIPアドレス
 port = 10500         # juliusの待ち受けポート
 
 # パソコンからTCP/IPで、自分PCのjuliusサーバに接続
