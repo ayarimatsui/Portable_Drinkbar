@@ -1,0 +1,65 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:551: checking host system type
+configure:574: checking for gcc
+configure:687: checking whether the C compiler (gcc  ) works
+configure:703: gcc -o conftest    conftest.c  1>&5
+configure:700:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ main(){return(0);}
+ ^~~~
+configure:729: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:734: checking whether we are using GNU C
+configure:743: gcc -E conftest.c
+configure:762: checking whether gcc accepts -g
+configure:794: checking how to run the C preprocessor
+configure:815: gcc -E  conftest.c >/dev/null 2>conftest.out
+configure:885: checking for a BSD compatible install
+configure:940: checking for rm
+configure:973: checking for Cygwin environment
+configure:989: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:983:20: error: '__CYGWIN32__' undeclared (first use in this function); did you mean '__LINE__'?
+ #define __CYGWIN__ __CYGWIN32__
+                    ^~~~~~~~~~~~
+configure:985:8: note: in expansion of macro '__CYGWIN__'
+ return __CYGWIN__;
+        ^~~~~~~~~~
+configure:983:20: note: each undeclared identifier is reported only once for each function it appears in
+ #define __CYGWIN__ __CYGWIN32__
+                    ^~~~~~~~~~~~
+configure:985:8: note: in expansion of macro '__CYGWIN__'
+ return __CYGWIN__;
+        ^~~~~~~~~~
+configure: failed program was:
+#line 978 "configure"
+#include "confdefs.h"
+
+int main() {
+
+#ifndef __CYGWIN__
+#define __CYGWIN__ __CYGWIN32__
+#endif
+return __CYGWIN__;
+; return 0; }
+configure:1006: checking for mingw32 environment
+configure:1018: gcc -c -g -O2  conftest.c 1>&5
+configure: In function 'main':
+configure:1014:8: error: '__MINGW32__' undeclared (first use in this function); did you mean '__LINE__'?
+ return __MINGW32__;
+        ^~~~~~~~~~~
+        __LINE__
+configure:1014:8: note: each undeclared identifier is reported only once for each function it appears in
+configure: failed program was:
+#line 1011 "configure"
+#include "confdefs.h"
+
+int main() {
+return __MINGW32__;
+; return 0; }
+configure:1037: checking for executable suffix
+configure:1047: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1068: checking for gethostbyname
+configure:1096: gcc -o conftest -g -O2   conftest.c  1>&5
+configure:1163: checking for connect
+configure:1191: gcc -o conftest -g -O2   conftest.c  1>&5
