@@ -2,9 +2,9 @@
 import pygame.mixer
 import time
 
-filename = '../sound/soda-open.mp3'
-pygame.mixer.init()
-pygame.mixer.music.load(filename) 
-pygame.mixer.music.play(1)
-time.sleep(1)
-pygame.mixer.music.stop()
+filename = '../sound/soda-open.ogg'
+pygame.init()
+soda=pygame.mixer.Sound(filename)
+soda.set_volume(1.0)
+soda.play()
+time.sleep(1.5)
