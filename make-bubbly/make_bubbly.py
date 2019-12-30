@@ -27,7 +27,3 @@ class MakeBubbly():
     def sound_play(self):
         self.soda.play()
         time.sleep(1.5)
-
-if __name__=="__main__":
-    sound=MakeBubbly()
-    sound.sound_play()
