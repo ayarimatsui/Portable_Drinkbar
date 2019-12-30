@@ -2,10 +2,11 @@
 #実行するときは。sudo python ...
 from neopixel import *
 import argparse
+import time
 
 class MakeColor():
 
-    def __init__(self)
+    def __init__(self):
         # LED strip configuration:
         LED_COUNT1     = 24     # Number of LED pixels.
         LED_COUNT2     = 7
@@ -62,68 +63,68 @@ class MakeColor():
         """Draw rainbow that uniformly distributes itself across all pixels."""
         for j in range(256*iterations):
             for i in range(strip.numPixels()):
-                strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
+                strip.setPixelColor(i, self.wheel((int(i * 256 / strip.numPixels()) + j) & 255))
             strip.show()
             time.sleep(wait_ms/1000.0)
 
 
     def initialize(self):
-        show_color(self.strip2,Color(0,0,0))
-        rainbowCycle(self.strip1)
+        self.show_color(self.strip2,Color(0,0,0))
+        self.rainbowCycle(self.strip1)
         self.color=Color(0,0,0)
 
     def all_off(self):
-        show_color(self.strip1.Color(0,0,0))
-        show_color(self.strip2,Color(0,0,0))
+        self.show_color(self.strip1,Color(0,0,0))
+        self.show_color(self.strip2,Color(0,0,0))
 
     def apple_juice(self):
         self.color=Color(200, 240, 40)
-        color_appears(self.strip1, self.color)  # wipe
-        color_appears(self.strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def black_tea(self):
         self.color=Color(36, 120, 6)
-        color_appears(strip1, self.color)  # wipe
-        color_appears(strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def coke(self):
         self.color=Color(0, 240, 0)
-        color_appears(strip1, self.color)  # wipe
-        color_appears(strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def coffee(self):
         self.color=Color(45, 80, 18)
-        color_appears(strip1, self.color)  # wipe
-        color_appears(strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def grapefruit_juice(self):
         self.color=Color(60, 160, 21)
-        color_appears(strip1, self.color)  # wipe
-        color_appears(strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def orange_juice(self):
         self.color=Color(70, 255, 0)
-        color_appears(strip1, self.color)  # wipe
-        color_appears(strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def grape_juice(self):
         self.color=Color(0, 200, 210)
-        color_appears(strip1, self.color)  # wipe
-        color_appears(strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def meron_soda(self):
         self.color=Color(200, 0, 20)
-        color_appears(strip1, self.color)  # wipe
-        color_appears(strip2, self.color)  # wipe
+        self.color_appears(self.strip1, self.color)  # wipe
+        self.color_appears(self.strip2, self.color)  # wipe
 
 
     def stay_the_same(self):
-        show_color(strip1, self.color)
-        show_color(strip2, self.color)
+        self.show_color(self.strip1, self.color)
+        self.show_color(self.strip2, self.color)
