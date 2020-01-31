@@ -21,7 +21,7 @@
   ボトルには、蓋が開いているか閉じているかを検知するシステムを作っており、ボトルの蓋が開いていることを感知すると、ボトルの横に付いている香り噴出装置から入力の飲み物の香りが発生します。この香りを含んだ空気を、ボトルの中身の水と一緒にストローで吸うことによって、入力した飲み物を味わうことができます。(図2)
 
 <div align="center">
-<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image2.png" width="320px">
+<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image2.png" width="400px">
 </div>
 
   また、入力がコーラまたはメロンソーダ、つまり炭酸飲料であった場合は、炭酸感を再現するために2つの工夫をしています。まず、ボトルの蓋を開ける際ですが、炭酸飲料の入ったペットボトルを開けるときの様な「シュッ」という音が蓋を開けたタイミングで再生される様にしています。さらに、蓋が開いた後、ボトルの内蓋(ストローを挿す部分)の中に埋め込まれたマイクロ振動モータを振動させることによって、挿したストローが振動し炭酸飲料の感触を再現できる様にしています。
@@ -29,7 +29,7 @@
   全体の流れをフローチャートにすると、以下の図の様になる。(図3)
 
 <div align="center">
-<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image3.png" width="480px">
+<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image3.png" width="640px">
 </div>
 
 　また、制御にはRaspberry Pi 3 Model Bを使用しました。
@@ -66,7 +66,7 @@ $ sudo python main6.py
 　ボトルの内側の蓋に超小型マグネットスイッチのスイッチ部を埋め込み、外側の蓋の内側に磁石を取り付けました。(図4)今回使用したマグネットスイッチでは、スイッチ部とマグネット部が接触している間ではスイッチは開いて通電していない状態で、スイッチ部とマグネット部が離れるとスイッチが開いて通電します。ボトルの蓋を回すとマグネットスイッチのスイッチ部と磁石が近づいたり遠ざかったりすることを利用して、蓋の開閉を検知する仕組みです。マグネットスイッチのスイッチ部は、竹中エンジニアリングの超小型マグネットスイッチを利用し、マグネット部には直径6mmのボタン型の磁石を使用しました。
 
 <div align="center">
-<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image4.png" width="320px">
+<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image4.png" width="400px">
 </div>
 
   プログラムでは、Portable_Drinkbar/detect_open/detect_open.pyの中で、蓋の開閉を調べるクラスDetectOpenを定義し、そのメソッドをメインファイルの中で呼び出して蓋の開閉状況を確認できるようにしました。
@@ -76,11 +76,11 @@ $ sudo python main6.py
 　ボトルの蓋が開いていることが検知されると、香り噴出装置が作動します。装置の中には、小型DCファンとファンの前に香料を染み込ませた脱脂綿を、味の種類の数だけ入れています。(図5)入力に応じて、該当する飲み物の香料の脱脂綿の後ろにあるファンが回ることで、入力された飲み物の香りが発生する仕組みです。香料は、製菓用に販売されているものを使用しました。噴出された香り付きの空気をストローで、ボトルの中の水と一緒に吸い込むことで、音声入力した飲み物の味を味わうことができます。装置外側の容器や、脱脂綿とDCファンを格納する容器は3Dプリンタで製作しました。DCファンを固定する板は、アクリル板をレーザーカッターで加工して製作しました。各DCファンは、20mm×20mm×10mmの寸法で、定格電圧5V、定格電流0.04Aのものを使用しました。DCファンを回すために十分な電流をRaspberry PiのGPIOピンから流すことはできないため、6Vの外部電源とトランジスタを用いて電流増幅回路を組み、Raspberry Piからファンの回転を制御できるようにしました。回路図は以下に示すようになります。(図6)
 
 <div align="center">
-<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image5.png" width="480px">
+<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image5.png" width="320px">
 </div>
 
 <div align="center">
-<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image6.png" width="320px">
+<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image6.png" width="400px">
 </div>
 
   プログラムでは、Portable_Drinkbar/make_aroma/make_aroma.pyの中で、DCファンの回転を制御するクラスMakeAromaを定義し、そのメソッドをメインファイルの中で呼び出して、入力に対応したファンを回すことができるようにしました。
