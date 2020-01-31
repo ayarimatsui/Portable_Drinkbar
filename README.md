@@ -4,7 +4,9 @@
 
 中に入っているのはただの水ですが、クロスモーダル現象を利用し、視覚、嗅覚、聴覚、触覚に働きかけることによって、味覚をハックし、1本で複数の飲み物の味を楽しむことができるボトル型デバイスを製作しました。作品名に関しては、”magical”と”bottle”を組み合わせて”Magicle”としました。
 
-<img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/magicle_logo.png" width="320px">
+<div align="center">
+<img src=https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/magicle_logo.png" width="320px">
+</div>
 
 ＜原理＞
 
