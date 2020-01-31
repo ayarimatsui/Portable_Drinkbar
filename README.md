@@ -1,13 +1,13 @@
-## Magicle ~Hack Your Taste~
+## Magicle 〜Hack Your Taste〜
 
-＊ What is Magicle? *
+＊ What is Magicle? ＊
 
 中に入っているのはただの水ですが、クロスモーダル現象を利用し、視覚、嗅覚、聴覚、触覚に働きかけることによって、味覚をハックし、1本で複数の飲み物の味を楽しむことができるボトル型デバイスを製作しました。作品名に関しては、”magical”と”bottle”を組み合わせて”Magicle”としました。
 
 ![magicle_logo](https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/magicle_logo.png)
 
 
-# ＜原理＞
+＜原理＞
 
 ・概要
 　まず、入力はユーザーによる音声入力またはキー入力で行います。再現できる味は全部で5種類あり、りんごジュース、紅茶(アールグレイ)、コーラ、ぶどうジュース、メロンソーダです。ユーザーが、飲みたいものを言う、またはキーで端末に入力すると、その味が楽しめる様に出力が変化します。
