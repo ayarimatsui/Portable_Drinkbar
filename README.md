@@ -27,7 +27,7 @@
 
   また、入力がコーラまたはメロンソーダ、つまり炭酸飲料であった場合は、炭酸感を再現するために2つの工夫をしています。まず、ボトルの蓋を開ける際ですが、炭酸飲料の入ったペットボトルを開けるときの様な「シュッ」という音が蓋を開けたタイミングで再生される様にしています。さらに、蓋が開いた後、ボトルの内蓋(ストローを挿す部分)の中に埋め込まれたマイクロ振動モータを振動させることによって、挿したストローが振動し炭酸飲料の感触を再現できる様にしています。
   
-  全体の流れをフローチャートにすると、以下の図の様になる。(図3)
+  全体の流れをフローチャートにすると、以下の図の様になります。(図3)
 
 <div align="center">
 <img src="https://github.com/ayarimatsui/Portable_Drinkbar/blob/master/images/image3.png" width="640px">
@@ -55,6 +55,7 @@ $ julius -C ~/Portable_Drinkbar/speech-recognition/julius-4.4.2/julius-kits/gram
 $ sudo python main6.py
 
 を実行
+
 
 
 
